@@ -47,6 +47,25 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION '/user/w205/hospital_compare/effective_care';
 
+DROP TABLE effective_care_state;
+CREATE EXTERNAL TABLE effective_care_state
+(state string,
+condition string,
+measure_name string,
+measure_id string,
+score string,
+footnote string,
+measure_start_date string,
+measure_end_date string)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+"separatorChar" = ",",
+"quoteChar" = '"',
+"escapeChar" = '\\'
+)
+STORED AS TEXTFILE
+LOCATION '/user/w205/hospital_compare/effective_care_state';
+
 DROP TABLE readmissions;
 CREATE EXTERNAL TABLE readmissions
 (provider_id string,
@@ -76,6 +95,27 @@ WITH SERDEPROPERTIES (
 )
 STORED AS TEXTFILE
 LOCATION '/user/w205/hospital_compare/readmissions';
+
+DROP TABLE readmissions_state;
+CREATE EXTERNAL TABLE readmissions_state
+(state string,
+measure_name string,
+measure_id string,
+num_worse int,
+num_same int,
+num_better int,
+num_too_few int,
+footnote string,
+measure_start_date string,
+measure_end_date string)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+"separatorChar" = ",",
+"quoteChar" = '"',
+"escapeChar" = '\\'
+)
+STORED AS TEXTFILE
+LOCATION '/user/w205/hospital_compare/readmissions_state';
 
 DROP TABLE measures;
 CREATE EXTERNAL TABLE measures
