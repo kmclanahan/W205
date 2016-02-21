@@ -33,7 +33,7 @@ phone string,
 condition string,
 measure_id string,
 measure_name string,
-score string,
+score int,
 sample string,
 footnote string,
 measure_start_date string,
@@ -109,8 +109,8 @@ discharge_dim_score string,
 overall_ach_pts string,
 overall_imp_pts string,
 overall_dim_score string,
-hcahps_base_score string,
-hcahps_cons_score string)
+hcahps_base_score int,
+hcahps_cons_score int)
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (
 "separatorChar" = ",",
