@@ -1,0 +1,15 @@
+What states are models of high-quality care?
+
+Using a similar methodology as with individual hospitals, looking at the cumulative scores in each state could identify which are exemplary models of good care. However, since some states will have more data points than others, I decided to look at the states with the top ten average scores over all treatments. The model states are as follows:
+
+DC      27468.0 100.98529411764706      5540.448313148787
+MD      133706.0        100.37987987987988      4189.495330916513
+DE      23897.0 99.98744769874477       3995.418252481569
+NY      536806.0        96.80901713255184       4300.054598583117
+NJ      235969.0        96.39256535947712       3703.4304512620597
+NV      79984.0 96.01920768307323       3640.611875962869
+NH      60866.0 95.55102040816327       2157.437349822188
+VI      4582.0  95.45833333333333       3202.123263888887
+CA      994058.0        95.29843735020611       3130.707503070547
+CT      99913.0 95.15523809523809       2983.4873297052136
+
