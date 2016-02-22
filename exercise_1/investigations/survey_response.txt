@@ -1,2 +1,26 @@
 Are average scores for hospital quality or procedural variability correlated with patient survey responses?
 
+I did not see a correlation with high scores for prcedural quality or variability with the survey responses. The highest rated hospitals from the surveys are as follows:
+
+MIDWEST SURGICAL HOSPITAL LLC   80.0    1
+PHYSICIAN'S CARE SURGICAL HOSPITAL      80.0    1
+PHYSICIANS CENTRE,THE   80.0    1
+PHYSICIANS' SPECIALTY HOSPITAL  80.0    1
+PHYSICIANS MEDICAL CENTER       80.0    1
+MANHATTAN SURGICAL HOSPITAL LLC 80.0    1
+BLACK HILLS SURGICAL HOSPITAL LLP       80.0    1
+OUACHITA COMMUNITY HOSPITAL     80.0    1
+ORTHOPAEDIC HOSPITAL OF WISCONSIN       80.0    1
+SURGICAL HOSPITAL AT SOUTHWOODS 80.0    1
+NORTH CENTRAL SURGICAL CENTER LLP       80.0    1
+FAYETTE MEDICAL CENTER  80.0    1
+LAFAYETTE SURGICAL SPECIALTY HOSPITAL   80.0    1
+WESTLAKE REGIONAL HOSPITAL      80.0    1
+ADVANCED SURGICAL HOSPITAL      80.0    1
+HEART HOSPITAL OF LAFAYETTE     80.0    1
+FAIRWAY MEDICAL CENTER  80.0    1
+SACRED HEART HOSPITAL ON THE GULF       80.0    1
+DAKOTA PLAINS SURGICAL CENTER LLP       80.0    1
+QUAIL CREEK SURGICAL HOSPITAL   80.0    1
+
+I suspect this is due to the relatively small amount of survey data available for each hospital. Only 9 hospitals have more than 3 survey responses in the data set, and these hospitals were not ranked very highly. It's possible that these are busier than the hospitals that have only a single survey, and thus the patient's perceived rating of their care was higher than the methodology for determining their procedural proficiency in the effective care data.
