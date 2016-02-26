@@ -1,6 +1,6 @@
 What hospitals are models of high-quality care?
 
-I would consider the hospitals with the highest cumulative scores across all the procedures for which we have data to be the models for high-quality care. The results of the query to determine these data are below:
+I would consider the hospitals with the highest cumulative scores across all the procedures for which we have data to be the models for high-quality care.  I chose cumulative over average since I wanted to make sure the hospitals for which we have the most data figured prominently in the rankings versus one that only performed a small number of procedures. The results of the query to determine these data are below:
 
 MEMORIAL HOSPITAL       26215.0 88.26599326599326       1971.649786302984
 ST JOSEPH HOSPITAL      22275.0 97.69736842105263       3046.4391158818107
