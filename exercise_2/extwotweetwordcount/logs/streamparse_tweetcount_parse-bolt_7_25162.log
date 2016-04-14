@@ -1,9 +1,0 @@
-2016-04-03 17:41:07,805 - streamparse.storm.component - ERROR - Exception in ParseTweet.run()
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 489, in run
-    self._run()
-  File "/usr/lib/python2.7/site-packages/streamparse/storm/bolt.py", line 219, in _run
-    self.process(tup)
-  File "bolts/parse.py", line 40, in process
-    aword = aword.join(e for e in string if e.isalnum())
-NameError: global name 'string' is not defined
