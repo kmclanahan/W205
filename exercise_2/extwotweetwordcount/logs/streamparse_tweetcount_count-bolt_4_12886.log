@@ -1,0 +1,12 @@
+2016-04-03 16:52:18,737 - streamparse.storm.component - ERROR - Exception in WordCounter.run()
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 489, in run
+    self._run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/bolt.py", line 219, in _run
+    self.process(tup)
+  File "bolts/wordcount.py", line 36, in process
+    cur.execute("WITH upsert AS (%s RETURNING *) %s WHERE NOT EXISTS (SELECT * FROM upsert)" % (upsert, insert))
+ProgrammingError: syntax error at or near "UPDATE"
+LINE 1: WITH upsert AS (UPDATE Tweetwordcount SET count=1 WHERE word...
+                        ^
+

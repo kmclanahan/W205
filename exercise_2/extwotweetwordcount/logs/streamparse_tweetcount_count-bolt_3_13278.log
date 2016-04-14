@@ -1,0 +1,10 @@
+2016-04-03 01:48:51,534 - streamparse.storm.component - ERROR - Exception in WordCounter.run()
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 489, in run
+    self._run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/bolt.py", line 219, in _run
+    self.process(tup)
+  File "bolts/wordcount.py", line 34, in process
+    cur.execute("INSERT INTO Tweetwordcount (word,count) VALUES (%s, %s)", (word, self.counts[word]))
+IntegrityError: duplicate key value violates unique constraint "tweetwordcount_pkey"
+
