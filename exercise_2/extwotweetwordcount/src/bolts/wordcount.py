@@ -34,8 +34,11 @@ class WordCounter(Bolt):
             try:
                 cur.execute("INSERT INTO Tweetwordcount (word, count) VALUES ('%s', %s)" % (word, self.counts[word]))
             
-            except psycopg2.ProgrammingError:
-                self.log('db collision on %s' %word)
+            except KeyboardInterrupt:
+                raise
+
+            except:
+                self.log('db collision on %s, using UPDATE instead!' %word)
                 cur.execute("UPDATE Tweetwordcount SET count='%s' WHERE word='%s'" % (self.counts[word]+1, word))
 
         #else update the existing record
