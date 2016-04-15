@@ -1,0 +1,9 @@
+2016-04-15 01:00:22,961 - streamparse.storm.component - ERROR - Exception in ParseTweet.run()
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 489, in run
+    self._run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/bolt.py", line 219, in _run
+    self.process(tup)
+  File "bolts/parse.py", line 62, in process
+    string += word
+TypeError: coercing to Unicode: need string or buffer, list found

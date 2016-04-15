@@ -1,0 +1,11 @@
+2016-04-15 01:04:22,789 - streamparse.storm.component - ERROR - Exception in WordCounter.run()
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 489, in run
+    self._run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/bolt.py", line 219, in _run
+    self.process(tup)
+  File "bolts/wordcount.py", line 58, in process
+    self.log('%s: %s: %d\n%s' % (category, location, self.counts[category], tweet))
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 407, in log
+    self.send_message({'command': 'log', 'msg': str(message),
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xe9' in position 15: ordinal not in range(128)
