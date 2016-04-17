@@ -30,12 +30,12 @@ def resolve(c):
             possibles.append(countries[countries.index(word)])
     
     if len(possibles) == 1:
-      return possibles[0]
+        return possibles[0]
     elif len(possibles) > 1:
-      ratios = []
-      for p in possibles:
-          ratios.append(similar(c, p))
-      return possibles[ratios.index(max(ratios))]
+        ratios = []
+        for p in possibles:
+            ratios.append(similar(c, p))
+        return possibles[ratios.index(max(ratios))]
     
     #next see if there's a close match
     ratios = []
