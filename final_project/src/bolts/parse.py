@@ -96,6 +96,7 @@ class ParseTweet(Bolt):
                 category = "Disaster"
             elif word[0] in countries:
                 category = "Country"
+                country = countries[countries.index(word[0])]
             string += word[0] + " "
         # Emit all the words
         if category != "None":
