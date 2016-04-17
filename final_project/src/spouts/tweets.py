@@ -78,7 +78,7 @@ class Tweets(Spout):
                 self.queue().task_done()
                 if tweet.place:
                     # self.log(str(tweet.place))
-                    self.emit([tweet.text, tweet.place.full_name])
+                    self.emit([tweet.text, tweet.place.full_name, tweet.place.country, tweet.place.bounding_box.coordinates])
  
         except Queue.Empty:
             # self.log("Empty queue exception ")

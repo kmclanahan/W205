@@ -8,7 +8,7 @@
     {"tweet-spout" (python-spout-spec
           options
           "spouts.tweets.Tweets"
-          ["tweet" "location"]
+          ["tweet" "location" "country" "coordinates"]
           :p 1
           )
     }
@@ -17,14 +17,14 @@
           options
           {"tweet-spout" :shuffle}
           "bolts.parse.ParseTweet"
-          ["tweet" "category" "location"]
+          ["tweet" "category" "location" "country" "coordinates"]
           :p 1
           )
      "count-bolt" (python-bolt-spec
          options
          {"parse-bolt" :shuffle}
          "bolts.wordcount.WordCounter"
-         ["category" "location" "count" "tweet"]
+         ["category" "location" "count" "tweet" "country" "coordinates"]
          :p 1
          )
     }
