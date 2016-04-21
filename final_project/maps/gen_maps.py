@@ -23,7 +23,7 @@ cur.execute("SELECT country, score FROM Baseline_Data")
 all_data = cur.fetchall()
 
 for row in all_data:
-    html_str +=  "          [\"%s\", \"%s\"],\n" %(row[0], row[1])
+    html_str +=  "          [\"%s\", %s],\n" %(row[0], row[1])
 
 conn.commit()
 conn.close()
