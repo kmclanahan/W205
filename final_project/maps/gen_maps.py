@@ -23,7 +23,7 @@ cur.execute("SELECT country, score FROM Baseline_Data")
 all_data = cur.fetchall()
 
 for row in all_data:
-    html_str +=  "          ['%s', '%s'],\n" %(row[0], row[1])
+    html_str +=  "          [\"%s\", \"%s\"],\n" %(row[0], row[1])
 
 conn.commit()
 conn.close()
@@ -118,14 +118,14 @@ for row in warnings:
     cur.execute("SELECT country FROM Twitter_Data WHERE country='%s'" % row)
     chatter = len(cur.fetchall())
 
-    html_str +=  "          ['%s', %s, %s],\n" %(row, 1, chatter)
+    html_str +=  "          [\"%s\", %s, %s],\n" %(row, 1, chatter)
 
 for row in alerts:
     if row not in warnings:
         cur.execute("SELECT country FROM Twitter_Data WHERE country='%s'" % row)
         chatter = len(cur.fetchall())
 
-        html_str +=  "          ['%s', %s, %s],\n" %(row, 0, chatter)
+        html_str +=  "          [\"%s\", %s, %s],\n" %(row, 0, chatter)
 
 
 conn.commit()
