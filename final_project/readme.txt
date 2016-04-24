@@ -1,8 +1,10 @@
-Instructions to run the application are as follows:
+There are many pieces to this project, and the descriptions of these are as follows:
 
-Log into the UCB AMI as root
-Mount a data volume that contains a postgres database called ‘tcount’ and a table named ‘Tweetwordcount’
-Start that database using the start_postgres.sh script provided
-Switch to the w205 user
-Navigate to the .../W205/exercise_2/extwotweetwordcount directory in my github repo
-Type ‘sparse run’ to run the application
+/final_project/dbase:
+Run database_init.py to setup the database and tables for the project. Note this will be destructive to any existing data in the travel_info database if it exists. The dump_* scripts are there for debug purposes.
+
+/final_project/dbase:
+
+
+/final_project/dbase:
+
