@@ -5,6 +5,7 @@ Run database_init.py to setup the database and tables for the project. Note this
 
 /final_project/data:
 Run the baseline.py script to download the WGI and FSI indicators, parse the data into np.array structures, adjust for any mentions from the monthly or biannual crisis group lists and store the results in the Baseline_Data table in postgres.
+*note, need to install xlrd library before running this part ('sudo pip install xlrd')
 
 /final_project/gubment:
 Run the load_govt_data.sh bash script to download the Travel Alerts and Warnings issued by the US State Department. The script will call load_govt_data.py if the downloads are successful which will parse and clean the data and load it into the Govt_Data table in postgres.
